@@ -122,6 +122,7 @@ public class HTTPHandler implements HttpHandler {
                     e.printStackTrace();
                 } catch (Exception e) {
                     System.out.println("Source " + source + " execution interrupted.");
+                    e.printStackTrace();
                 }
             }
         });

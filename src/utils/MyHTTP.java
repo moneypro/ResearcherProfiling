@@ -89,6 +89,7 @@ public class MyHTTP {
             while ((line = bufferedReader.readLine()) != null) {
                 response += line;
             }
+            System.out.println(response);
             return response;
         } catch (MalformedURLException e) {
             e.printStackTrace();

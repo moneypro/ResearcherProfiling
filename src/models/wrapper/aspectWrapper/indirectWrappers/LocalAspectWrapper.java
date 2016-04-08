@@ -3,6 +3,7 @@ package models.wrapper.aspectWrapper.indirectWrappers;
 import database.EmbeddedDB;
 import models.relevanceFiltering.RelevanceFilter;
 import models.schema.Schema;
+import models.wrapper.GeneralWrapper;
 import models.wrapper.aspectWrapper.GeneralAspectWrapper;
 import models.wrapper.sourceWrapper.GeneralSourceWrapper;
 import models.wrapper.sourceWrapper.IndirectSourceWrapper;
@@ -31,7 +32,7 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
 
     public LocalAspectWrapper(EmbeddedDB db, String aspectName) {
         super(db, aspectName);
-        String aspectBasePath = basePath + "/" + aspectName;
+        String aspectBasePath = GeneralWrapper.basePath + "/" + aspectName;
         try {
             this.schema = Schema.readFromFile(aspectBasePath + "/schema.tsv");
         } catch (Exception e) {
@@ -300,6 +301,7 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
                 } catch (InterruptedException e) {
                     System.out.println(registeredSource.name + "'s execution interrupted.");
                     e.printStackTrace();
+                    System.out.println(registeredSource.name+"fails");
                 }
 
 

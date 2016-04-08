@@ -137,7 +137,7 @@ public class DirectSourceWrapper extends GeneralSourceWrapper {
     public DirectSourceWrapper(Schema schema, String name, String aspect) {
         super(schema, name);
         this.aspect = aspect;
-
+        System.out.println(aspect);
         compileFiles();
 
         try {

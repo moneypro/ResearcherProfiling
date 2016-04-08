@@ -41,7 +41,7 @@ public abstract class GeneralSourceWrapper implements GeneralWrapper {
         long startTime = System.currentTimeMillis();
         JSONArray ret = getResultAsJSON(searchConditions);
         long endTime = System.currentTimeMillis();
-        System.out.println("Source " + name + " ended execution. Time elapsed: " + ((double)(endTime - startTime)/1000.0) + " seconds. Found: " + ret.size());
+//        System.out.println("Source " + name + " ended execution. Time elapsed: " + ((double)(endTime - startTime)/1000.0) + " seconds. Found: " + ret.size());
         return ret;
     }
 }

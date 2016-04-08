@@ -47,8 +47,10 @@ public class SearchHandler{
     public void reset() {
         this.lastQuery = null;
         File aspDir = new File(GeneralWrapper.basePath);
+        System.out.println(System.getProperty("user.dir"));
         this.registeredAspects = new HashSet<GeneralAspectWrapper>();
         this.activation = new HashMap<String, Boolean>();
+        File[] sourceNames = aspDir.listFiles();
         if (aspDir.exists() && aspDir.isDirectory()) {
             File[] aspects = aspDir.listFiles();
             try {
